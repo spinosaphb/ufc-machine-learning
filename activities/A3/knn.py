@@ -18,5 +18,4 @@ def predict_classification(X, y, test_row, k):
     counts = np.unique(output_values, return_counts=True)
     idx_max = np.argmax(counts[1])
     prediction = counts[0][idx_max]
-    print('idx_sort:{}, output_values:{}, prediction:{}'.format(idx_sort, output_values, prediction))
     return prediction
