@@ -29,4 +29,4 @@ def predict_regression(X_train, y_train, X_test_row, k):
     output_values = y_train[idx_sort]
     regression = np.sum(output_values) / k
     return regression
-    
+
