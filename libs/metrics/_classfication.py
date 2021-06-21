@@ -24,7 +24,7 @@ def _weighted_average(data, weights):
 """
 precision score
 """
-def precision_score(y_true, y_pred, labels=None, avarage='weighted') -> float:
+def precision_score(y_true, y_pred, labels=None, average='weighted') -> float:
     y_true, y_pred = np.array(y_true), np.array(y_pred)
     
     if labels is None:
@@ -42,7 +42,7 @@ def precision_score(y_true, y_pred, labels=None, avarage='weighted') -> float:
 
     precisions = true_positives / total
     weights = _get_weights_label(y_true=y_true, labels=labels)
-    if avarage == 'weighted':
+    if average == 'weighted':
         return _weighted_average(precisions, weights)
     return precisions
 """

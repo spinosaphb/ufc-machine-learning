@@ -16,6 +16,6 @@ def mean_squared_error(y_true, y_pred, squared=True):
     diff = (y_true - y_pred)**2
     squared_error = np.sum(diff)
     mean_s_e = squared_error / y_true.shape[0] 
-    if squared:
+    if not squared:
         return mean_s_e ** 0.5
     return mean_s_e
